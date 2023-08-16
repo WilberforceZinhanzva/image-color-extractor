@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/">
+        <file>icons/widgets.svg</file>
+        <file>icons/diagonal.svg</file>
+        <file>icons/horizontal.svg</file>
+        <file>icons/vertical.svg</file>
+    </qresource>
+</RCC>
