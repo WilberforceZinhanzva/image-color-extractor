@@ -11,12 +11,20 @@ ColorExtractorModel::ColorExtractorModel(QObject *parent) : QAbstractListModel(p
 
 void ColorExtractorModel::startColorExtraction(const QString &imagePath, const int &imageWidth, const QPoint &topLeft, const QPoint &bottomRight)
 {
+    clearColors();
     m_colorExtractorThread->extractColor(imagePath,imageWidth,topLeft,bottomRight);
 }
 
 void ColorExtractorModel::changeAlgorithm(const ColorExtractorThread::AlgorithmType &algorithmType)
 {
     m_colorExtractorThread->algorithmTypeChanged(algorithmType);
+}
+
+void ColorExtractorModel::clearColors()
+{
+    beginResetModel();
+    m_colors.clear();
+    endResetModel();
 }
 
 void ColorExtractorModel::colorExtracted(const QColor &color)

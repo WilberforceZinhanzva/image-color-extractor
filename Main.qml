@@ -16,6 +16,9 @@ Window {
     visible: true
     title: qsTr("Color Extractor")
 
+
+
+
 //    ScrollView{
 //        anchors.top: parent.top
 //        anchors.left: parent.left
@@ -202,6 +205,7 @@ Window {
 
     }
 
+
     //BUTTONS
     RowLayout{
         id: _buttonsLayout
@@ -352,6 +356,20 @@ Window {
 
 
 
+    //COLOR PANEL
+
+    ColorPanel{
+        id: _colorPanel
+        anchors.bottom: parent.bottom
+        anchors.left: parent.left
+        anchors.right: parent.right
+        height: parent.height/2
+        colorsModel: _colorExtractorModel
+    }
+
+
+
+
     ColorExtractorModel{
         id: _colorExtractorModel
     }
@@ -371,7 +389,8 @@ Window {
 
 
         function onColorExtractionFinished(){
-            //_button2.enabled = true
+             _exctrationButtonMouseArea.enabled = true
+            _colorPanel.visible = true
         }
     }
 

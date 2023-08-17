@@ -20,6 +20,8 @@ public:
     Q_INVOKABLE void startColorExtraction(const QString &imagePath, const int &imageWidth, const QPoint &topLeft, const QPoint &bottomRight);
     Q_INVOKABLE void changeAlgorithm(const ColorExtractorThread::AlgorithmType &algorithmType);
 
+    void clearColors();
+
 
 private slots:
     void colorExtracted(const QColor & color);

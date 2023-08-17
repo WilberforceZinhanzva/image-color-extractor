@@ -24,6 +24,7 @@ qt_add_qml_module(appColorExtractor
     QML_FILES AppMenu.qml
     RESOURCES assets.qrc
     QML_FILES AlgoButton.qml
+    QML_FILES ColorPanel.qml
 )
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
